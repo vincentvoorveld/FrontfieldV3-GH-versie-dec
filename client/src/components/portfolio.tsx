@@ -76,7 +76,7 @@ export default function Portfolio() {
             </Card>
           ))}
 
-          {/* Free website offer card */}
+          {/* Free website offer card (Hidden for now)
           <Card className="hover-lift cursor-pointer border-2 border-dashed border-secondary/40 bg-white/50 backdrop-blur-sm overflow-hidden">
             <div className="relative">
               <img
@@ -103,6 +103,7 @@ export default function Portfolio() {
               <p className="text-muted-foreground text-xs">*voorwaarden zijn van toepassing</p>
             </CardContent>
           </Card>
+          */}
         </div>
 
         <div className="text-center mt-12">
