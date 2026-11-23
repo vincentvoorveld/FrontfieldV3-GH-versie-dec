@@ -67,13 +67,6 @@ export default function FAQ() {
     }
   ];
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,12 +94,8 @@ export default function FAQ() {
             <div className="mt-8 pt-6 border-t text-center">
               <p className="text-muted-foreground">
                 Heb je een andere vraag?{" "}
-                <button
-                  onClick={scrollToContact}
-                  className="text-secondary hover:underline font-medium"
-                >
-                  Stuur gerust een mail!
-                </button>
+                <a href="mailto:info@frontfield.nl" className="text-secondary hover:underline font-medium">
+                  Stuur gerust een mail!</a>
               </p>
             </div>
           </CardContent>
