@@ -1,27 +1,28 @@
-// Gebruik echte portfolio-projecten in plaats van de oude voorbeeldlogo's.
-const projects = [
-  { initials: "BN", name: "Barbershop Nieuwland", category: "Barbershop", color: "#d7a76e" },
-  { initials: "AD", name: "Anne's Dieren Tekeningen", category: "Kunst & illustratie", color: "#8ebbb2" },
-  { initials: "SC", name: "Silverwood Coloring", category: "Kleurboeken", color: "#bc9bdb" },
-  { initials: "SK", name: "Sinterklaas Kleurboek", category: "Kleurboeken", color: "#e9b879" }
+import virtualAssistantLogo from "@assets/Virtual Assistent_1752928699316.png";
+import fitnessLogo from "@assets/Fitness Center_1752928699317.png";
+import barbershopLogo from "@assets/Barbershop_1752928699318.png";
+import ariaLogo from "@assets/Aria Silverwood_1752928699319.png";
+
+// Bewaar de bestaande logo-bestanden. Ster van het Verhaal is niet zichtbaar.
+const logos = [
+  { src: virtualAssistantLogo, alt: "Virtual Assistant" },
+  { src: fitnessLogo, alt: "Fitness Center" },
+  { src: barbershopLogo, alt: "Barbershop Nieuwland" },
+  { src: ariaLogo, alt: "Aria Silverwood" }
 ];
 
 export default function ClientLogos() {
   return (
-    <section className="py-16 bg-primary border-y border-border" aria-label="Voorbeelden van websites">
-      <div className="overflow-hidden">
-        <div className="flex animate-scroll" style={{ width: "max-content", animationDuration: "32s" }}>
-          {[...projects, ...projects].map((project, index) => (
-            <div key={index} className="flex items-center mx-4" style={{ width: 320, flexShrink: 0 }}>
-              <div className="flex items-center w-full rounded-lg p-4" style={{ background: "#fff", gap: 16, minHeight: 100, boxShadow: "0 5px 20px rgba(0,0,0,.12)" }}>
-                <div className="flex items-center justify-center rounded-lg font-bold" style={{ width: 60, height: 60, flexShrink: 0, color: "#162840", background: project.color, fontSize: 21 }}>
-                  {project.initials}
-                </div>
-                <div style={{ minWidth: 0 }}>
-                  <div className="font-semibold" style={{ color: "#162840", fontSize: 16, lineHeight: 1.35 }}>{project.name}</div>
-                  <div style={{ color: "#607083", fontSize: 13, marginTop: 5 }}>{project.category}</div>
-                </div>
-              </div>
+    <section className="py-14 bg-primary border-y border-border" aria-label="Logo's van voorbeeldwebsites">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="flex animate-scroll items-center" style={{ width: "max-content", animationDuration: "32s" }}>
+          {[...logos, ...logos].map((logo, index) => (
+            <div key={index} className="flex items-center justify-center h-36 mx-8 sm:mx-10" style={{ width: 240, flexShrink: 0 }}>
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="max-h-28 max-w-full object-contain grayscale brightness-0 invert opacity-85 hover:opacity-100 transition-opacity duration-300"
+              />
             </div>
           ))}
         </div>
