@@ -1,7 +1,6 @@
 import { Gift, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import sterImage from "../../../attached_assets/Ster van het Verhaal_1762157222343.png";
 import sinterklaasImage from "../../../attached_assets/Sinterklaas Kleurboek_1762157222341.png";
 import silverwoodImage from "../../../attached_assets/voorbeeld site silverwood coloring_1763228172359.jpg";
 import barbershopImage from "../../../attached_assets/Barbershop Nieuwland_1762157222339.png";
@@ -9,12 +8,6 @@ import annesDierenImage from "../../../attached_assets/voorbeeld site Annes Dier
 
 export default function Portfolio() {
   const portfolioItems = [
-    {
-      image: sterImage,
-      title: "Ster van het Verhaal",
-      description: "Een e-commerce website voor gepersonaliseerde kinderboeken. Ouders kunnen boeken samenstellen waarin hun kind de hoofdrol speelt, compleet met hun eigen naam en illustraties op basis van foto's.",
-      link: "https://stervanhetverhaal.nl/"
-    },
     {
       image: sinterklaasImage,
       title: "Sinterklaas Kleurboek",
